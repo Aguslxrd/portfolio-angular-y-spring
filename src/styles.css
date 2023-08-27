@@ -31,7 +31,11 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	background-color: #161616;
+	margin: 0;
+    padding: 0 ;
+    background-color: #161616;
+    color: #CCCCCC;
+    overflow-x: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -47,4 +51,43 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+/*scrollbar*/
+/* Cambiar el color de fondo de la barra de desplazamiento */
+::-webkit-scrollbar {
+	background-color: #292929;
+  }
+  
+  /* Cambiar el estilo del thumb de la barra de desplazamiento */
+  ::-webkit-scrollbar-thumb {
+	background-color: #555555;
+	border-radius: 10px;
+  }
+  
+  /* Cambiar el color de fondo del thumb al pasar el mouse sobre él */
+  ::-webkit-scrollbar-thumb:hover {
+	background-color: #888888;
+  }
+  
+  /* Cambiar el color de fondo del thumb cuando se está arrastrando */
+  ::-webkit-scrollbar-thumb:active {
+	background-color: #999999;
+  }
+  
+  
+  a{
+	text-decoration: none;
+  }
+  
+  html{
+	scroll-behavior: smooth;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
 }

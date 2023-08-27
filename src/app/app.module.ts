@@ -8,6 +8,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { BackgroundnoiseComponent } from './components/backgroundnoise/backgroundnoise.component';
 import { MaincardComponent } from './components/maincard/maincard.component';
 import { ProjectscardsComponent } from './components/projectscards/projectscards.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ProjectscardsComponent } from './components/projectscards/projectscards
     NavbarComponent,
     BackgroundnoiseComponent,
     MaincardComponent,
-    ProjectscardsComponent
+    ProjectscardsComponent,
+    SkillsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
