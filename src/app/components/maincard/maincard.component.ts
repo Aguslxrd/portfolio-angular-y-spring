@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class MaincardComponent {
 
+
+  enviarCorreo() {
+    window.open('mailto:suffodamian02@gmail.com');
+  }
 }
