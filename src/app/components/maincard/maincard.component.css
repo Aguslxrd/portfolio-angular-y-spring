@@ -1,0 +1,174 @@
+/* card container */
+.card {
+    width: 17em;
+    height: 22.5em;
+    background: #111111c5;
+    transition: 1s ease-in-out;
+    clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 60px;
+    font-size: 20px; /*Tamaño del card*/
+  }
+  
+  
+  .card span {
+    color: white;
+    text-align: center;
+    display: block;
+    font-size: 1em;
+  }
+  
+  
+  .card .info {
+    color: white;
+    display: block;
+    text-align: center;
+    font-size: 0.82em;
+    margin: 1em;
+  }
+  
+  .card .img {
+    width: 6rem;
+    height: 5.8rem;
+    background: white;
+    border-radius: 15px;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card .share {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    
+  }
+  
+  .card a {
+    color: #CCCCCC;
+    transition: .4s ease-in-out;
+  }
+  
+  .card a:hover {
+    color: rgb(116, 11, 236);
+  }
+  
+  .card .contact-me-button {
+    padding: 0.8em 1.7em;
+    display: block;
+    margin: auto;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    transition: 560ms ease-in-out;
+  }
+  
+  .card .contact-me-button:hover {
+    background: rgb(116, 11, 236);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 0px 30px 1px rgba(119, 0, 255, 0.3);
+  }
+  
+  .bi-bi-linkedin:hover, 
+  .bi-bi-instagram:hover, 
+  .bi-bi-github:hover{
+    box-shadow: 0px 0px 30px 1px rgba(119, 0, 255, 0.3);
+  }
+
+
+  .my-cv {
+    display: block;
+    background-color:hsla(0,0%,100%,.1);
+    transition: all 400ms ease-in-out;
+    width: 13.5vw;
+    height: 2px;
+    border: none;
+    border-radius: 1rem;
+    padding: 0;
+    margin: 0;
+    font-style:oblique;
+  }
+  .my-cv:hover {
+    height: 35px;
+    width: 50%;
+    background-color:hsla(0,0%,100%,.1);
+    border-radius: 1rem;
+    color: rgb(116, 11, 236);
+    cursor: pointer;
+    font-style:oblique;
+    font-weight: bolder;
+    box-shadow: 0px 0px 30px 1px rgba(119, 0, 255, 0.3);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .my-cv {
+      height: 35px;
+      width: 50%;
+      background-color:hsla(0,0%,100%,.1);
+      border-radius: 1rem;
+      color: rgb(116, 11, 236);
+      cursor: pointer;
+      font-style:oblique;
+      font-weight: bolder;
+      box-shadow: 0px 0px 30px 1px rgba(119, 0, 255, 0.3);
+    }
+  }
+  
+  
+  .divGeneral .scroll-down {
+    position: relative;
+    bottom: 49%;
+    left: 49%;
+    transform: translate(-50%, 50%);
+    display: flex;
+    margin: 1rem;
+    max-width: fit-content;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .divGeneral .scroll-down:hover {
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .scroll-down {
+      bottom: 30%;
+      transform: translate(-50%, 30%);
+    }
+  }
+  
+  .divGeneral .scroll-down {
+    position: relative;
+    bottom: 49%;
+    left: 49%;
+    transform: translate(-50%, 50%);
+    display: flex;
+    margin: 1rem;
+    max-width: fit-content;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .divGeneral .scroll-down:hover {
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .scroll-down {
+      bottom: 30%;
+      transform: translate(-50%, 30%);
+    }
+  }
