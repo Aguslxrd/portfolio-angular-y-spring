@@ -10,6 +10,9 @@ import { MaincardComponent } from './components/maincard/maincard.component';
 import { ProjectscardsComponent } from './components/projectscards/projectscards.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AdminComponent } from './pages/admin/admin.component';
+import { LoginComponent } from './pages/login/login.component';
+import { LoginformComponent } from './components/loginform/loginform.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { FooterComponent } from './components/footer/footer.component';
     MaincardComponent,
     ProjectscardsComponent,
     SkillsComponent,
-    FooterComponent
+    FooterComponent,
+    AdminComponent,
+    LoginComponent,
+    LoginformComponent
   ],
   imports: [
     BrowserModule,
