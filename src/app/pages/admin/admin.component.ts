@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { BackendapiService } from 'src/app/services/backendapi.service';
 
 
@@ -7,22 +8,6 @@ import { BackendapiService } from 'src/app/services/backendapi.service';
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
-export class AdminComponent implements OnInit {
-
-  data: any[] = [];
-
-  constructor(private backendapi: BackendapiService) {}
-
-  ngOnInit(): void {
-    this.llenarData();
-  }
-
-  llenarData(){
-    this.backendapi.getData().subscribe( data => {
-      this.data = data;
-      console.log(this.data);
-      
-    })
-  }
+export class AdminComponent {
 
 }

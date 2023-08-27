@@ -1,0 +1,44 @@
+.containerUsers {
+    text-align: center;
+    margin-top: 2rem;
+    color: white;
+    width: 25vw;
+    border: #da0808 1px solid;
+    max-height: 400px; 
+    overflow-y: auto;
+}
+
+.person-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.person-item {
+    background-color: #171717;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.person-item:hover {
+    background-color: #2c2c2c;
+}
+
+.refresh-button {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #2c2c2c;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.refresh-button:hover {
+    background-color: #171717;
+}

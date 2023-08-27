@@ -1,0 +1,9 @@
+<div class="containerUsers">
+    <h2>Usuarios</h2>
+    <button class="refresh-button" (click)="refreshData()">Actualizar Lista</button>
+    <ul class="person-list">
+        <li *ngFor="let item of data" class="person-item">
+            {{ item.firstname }} {{ item.lastname }} - {{ item.email }}
+        </li>
+    </ul>
+</div>

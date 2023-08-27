@@ -14,6 +14,8 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { LoginComponent } from './pages/login/login.component';
 import { LoginformComponent } from './components/loginform/loginform.component';
 import {HttpClientModule} from '@angular/common/http';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { ModalusersComponent } from './components/modalusers/modalusers.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +29,14 @@ import {HttpClientModule} from '@angular/common/http';
     FooterComponent,
     AdminComponent,
     LoginComponent,
-    LoginformComponent
+    LoginformComponent,
+    ModalusersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
