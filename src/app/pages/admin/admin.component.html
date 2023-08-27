@@ -1,2 +1,11 @@
 <app-navbar></app-navbar>
 <app-backgroundnoise></app-backgroundnoise>
+
+<div class="container">
+    <h2>Data de la API</h2>
+    <ul class="person-list">
+        <li *ngFor="let item of data" class="person-item">
+           {{item.id}} - {{ item.firstname }} {{ item.lastname }} - {{ item.email }}
+        </li>
+    </ul>
+</div>
