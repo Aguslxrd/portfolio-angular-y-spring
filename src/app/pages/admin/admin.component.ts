@@ -8,6 +8,10 @@ import { BackendapiService } from 'src/app/services/backendapi.service';
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
+
+
 export class AdminComponent {
+
+  
 
 }

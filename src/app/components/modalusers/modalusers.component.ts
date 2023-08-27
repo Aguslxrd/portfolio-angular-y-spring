@@ -30,9 +30,14 @@ export class ModalusersComponent {
   }
 
   loadData() {
-    this.apiService.getData().subscribe((response: any) => {
-      this.data = response;
-    });
+    this.apiService.getData().subscribe(
+      (response: any) => {
+        this.data = response;
+      },
+      (error: any) => {
+        console.error('Error al cargar los datos:', error);
+      }
+    );
   }
 
   refreshData() {
