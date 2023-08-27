@@ -16,6 +16,7 @@ import { LoginformComponent } from './components/loginform/loginform.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ModalusersComponent } from './components/modalusers/modalusers.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ModalusersComponent } from './components/modalusers/modalusers.componen
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

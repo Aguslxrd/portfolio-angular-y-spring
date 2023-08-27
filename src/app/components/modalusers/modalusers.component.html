@@ -1,9 +1,33 @@
 <div class="containerUsers">
     <h2>Usuarios</h2>
     <button class="refresh-button" (click)="refreshData()">Actualizar Lista</button>
+  
     <ul class="person-list">
-        <li *ngFor="let item of data" class="person-item">
-            {{ item.firstname }} {{ item.lastname }} - {{ item.email }}
-        </li>
+      <li *ngFor="let item of data" class="person-item">
+        {{ item.firstname }} {{ item.lastname }} - {{ item.email }} - {{item.isadmin}}
+        <button (click)="deleteUser(item.id)">Eliminar</button>
+      </li>
     </ul>
 </div>
+
+<!-- Formulario fuera del div .containerUsers -->
+<form (ngSubmit)="submitForm()" class="user-form">
+  <h2>Agregar Nuevo Usuario</h2>
+  <label for="firstname">Nombre:</label>
+  <input type="text" id="firstname" [(ngModel)]="newUser.firstname" name="firstname" required>
+  
+  <label for="lastname">Apellido:</label>
+  <input type="text" id="lastname" [(ngModel)]="newUser.lastname" name="lastname" required>
+  
+  <label for="email">Correo electrónico:</label>
+  <input type="email" id="email" [(ngModel)]="newUser.email" name="email" required>
+  
+  <!-- Agrega campos para contraseña y isAdmin si son necesarios -->
+  <label for="password">Contraseña:</label>
+  <input type="password" id="password" [(ngModel)]="newUser.passwd" name="password">
+  
+  <label for="isadmin">Es administrador:</label>
+  <input type="checkbox" id="isadmin" [(ngModel)]="newUser.isadmin" name="isadmin">
+  
+  <button type="submit">Agregar Usuario</button>
+</form>
