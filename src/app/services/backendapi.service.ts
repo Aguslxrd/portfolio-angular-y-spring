@@ -18,7 +18,7 @@ export class BackendapiService {
     const token = this.authService.getToken();
     return new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`
+      'Authorization': `${token}`
     });
   }
 
@@ -33,7 +33,13 @@ export class BackendapiService {
   public deleteData(userId: number): Observable<any> {
     const deleteUrl = `${this.urlApi}/${userId}`;
     const headers = this.getHeaders();
-    return this.http.delete(deleteUrl, { headers });
+
+    return this.http.delete(deleteUrl, { headers }).pipe(
+      catchError((error: HttpErrorResponse) => {
+        console.error('Error al enviar la solicitud DELETE:', error);
+        return throwError('Error al eliminar usuario. Por favor, verifica los datos e intenta nuevamente.');
+      })
+    );
   }
 
   postData(newUserData: any): Observable<any> {
