@@ -51,4 +51,15 @@ export class BackendapiService {
       })
     );
   }
+
+  public putData(userId: number, updatedUserData: any): Observable<any> {
+    const putUrl = `${this.urlApi}/${userId}`;
+    const headers = this.getHeaders();
+    return this.http.put(putUrl, updatedUserData, { headers }).pipe(
+      catchError((error: HttpErrorResponse) => {
+        console.error('Error al enviar la solicitud PUT:', error);
+        return throwError('Error al actualizar usuario. Por favor, verifica los datos e intenta nuevamente.');
+      })
+    );
+  }
 }

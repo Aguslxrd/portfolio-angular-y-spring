@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { BackendapiService } from 'src/app/services/backendapi.service';
 
@@ -8,7 +8,7 @@ import { BackendapiService } from 'src/app/services/backendapi.service';
   templateUrl: './modalusers.component.html',
   styleUrls: ['./modalusers.component.css']
 })
-export class ModalusersComponent {
+export class ModalusersComponent implements OnInit {
   
   data: any[] = [];
   newUser: any = {
@@ -19,6 +19,8 @@ export class ModalusersComponent {
     isadmin: false
   };
   modalRef: BsModalRef | undefined;
+  editUser: any = {};
+  editingUserId: number | null = null;
 
   constructor(
     private apiService: BackendapiService,
@@ -59,22 +61,31 @@ export class ModalusersComponent {
   }
 
   submitForm() {
-    this.apiService.postData(this.newUser).subscribe(
-      () => {
-        // Limpia los campos del formulario
-        this.newUser = {
-          firstname: '',
-          lastname: '',
-          email: '',
-          passwd: '', // Puedes dejarlo vacío si no es necesario
-          isadmin: false // Puedes establecerlo en false si no es necesario
-        };
-        // Actualiza la lista después de agregar
-        this.loadData();
-      },
-      (error: any) => {
-        console.error('Error al agregar usuario:', error);
-      }
-    );
+    if (this.editingUserId !== null) {
+      this.apiService.putData(this.editingUserId, this.editUser).subscribe(() => {
+        this.refreshData();
+        this.editingUserId = null; // Reset editing state
+        this.editUser = {}; // Clear edit form
+      });
+    } else {
+      this.apiService.postData(this.newUser).subscribe(() => {
+        this.refreshData();
+        this.newUser = {}; // Clear add form
+      });
+    }
+  }
+
+  editUserForm(userId: number) {
+    // Find the user by ID and populate the edit form
+    const userToEdit = this.data.find(user => user.id === userId);
+    if (userToEdit) {
+      this.editingUserId = userId;
+      this.editUser = { ...userToEdit }; // Copy the user's data to the editUser object
+    }
+  }
+
+  cancelEdit() {
+    this.editingUserId = null;
+    this.editUser = {};
   }
 }
