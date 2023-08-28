@@ -23,6 +23,29 @@
   <label for="editEmail">Correo electrónico:</label>
   <input type="email" id="editEmail" [(ngModel)]="editUser.email" name="editEmail" required>
 
-  <button type="submit">Guardar Cambios</button>
-  <button type="button" (click)="cancelEdit()">Cancelar</button>
+  <button type="submit" class="save-button">Guardar Cambios</button>
+  <button type="button" (click)="cancelEdit()" class="cancel-button">Cancelar</button>
+</form>
+
+
+<!-- Formulario fuera del div .containerUsers -->
+<form (ngSubmit)="submitForm()" class="user-form">
+  <h2>Agregar Nuevo Usuario</h2>
+  <label for="firstname">Nombre:</label>
+  <input type="text" id="firstname" [(ngModel)]="newUser.firstname" name="firstname" required>
+
+  <label for="lastname">Apellido:</label>
+  <input type="text" id="lastname" [(ngModel)]="newUser.lastname" name="lastname" required>
+
+  <label for="email">Correo electrónico:</label>
+  <input type="email" id="email" [(ngModel)]="newUser.email" name="email" required>
+
+  <!-- Agrega campos para contraseña y isAdmin si son necesarios -->
+  <label for="password">Contraseña:</label>
+  <input type="password" id="password" [(ngModel)]="newUser.passwd" name="password">
+
+  <label for="isadmin">Es administrador:</label>
+  <input type="checkbox" id="isadmin" [(ngModel)]="newUser.isadmin" name="isadmin">
+
+  <button type="submit">Agregar Usuario</button>
 </form>
