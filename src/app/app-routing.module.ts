@@ -10,7 +10,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] }, // Usa el guard aquí
-  //{ path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   {path: 'home', component: HomeComponent},
   { path: 'projects', component: ProjectscardsComponent },
   { path: 'skills', component: SkillsComponent }
