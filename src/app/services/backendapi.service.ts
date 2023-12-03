@@ -23,7 +23,7 @@ export class BackendapiService {
   }
 
   public getData(): Observable<any>{
-    const token = this.authService.getToken(); // Obtener el token del servicio AuthService
+    const token = this.authService.getToken();
     const headers = new HttpHeaders().set('Authorization', `${token}`);
     
     
