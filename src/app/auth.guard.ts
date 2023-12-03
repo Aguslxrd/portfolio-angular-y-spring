@@ -14,10 +14,9 @@ export class AuthGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean | UrlTree {
     if (this.authService.isAuthenticated()) {
-      // El usuario está autenticado, permitir el acceso
+      // El usuario está autenticado, permite el acceso.
       return true;
     } else {
-      // El usuario no está autenticado, redirigir a la página de inicio de sesión
       return this.router.createUrlTree(['/home']);
     }
   }
