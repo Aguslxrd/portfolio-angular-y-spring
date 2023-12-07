@@ -1,6 +1,13 @@
 <app-navbar></app-navbar>
 <app-backgroundnoise></app-backgroundnoise>
 <app-maincard></app-maincard>
-<app-projectscards></app-projectscards>
-<app-skills></app-skills>
+@defer {
+
+    <app-projectscards></app-projectscards>
+    <app-skills></app-skills>
+} @placeholder {
+    <h3>Loading...</h3>
+} @loading{
+    <p>Indexing data</p>
+}
 <app-footer></app-footer>
