@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
 })
 export class ProjectscardsComponent {
   
+  isModalVisible: boolean = false;
 
+  openModal() {
+    this.isModalVisible = true;
+  }
+
+  closeModal() {
+    this.isModalVisible = false;
+  }
 }

@@ -1,0 +1,29 @@
+<div class="modal" [class.show]="isVisible" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">ArcticCRM</h5>
+          <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Este proyecto es una demo de un proyecto de mi emprendimiento de ArcticNode.</p>
+          <p>→ <a href="https://github.com/Aguslxrd/arctic-crm" target="_blank">Backend</a></p>
+          <p>→ <a href="https://github.com/Aguslxrd/crm-frontend" target="_blank">Frontend</a></p>
+          <hr>
+          <p>→ <a href="http://arcticnode.duckdns.org:4300/swagger-ui/index.html#/" target="_blank">Documentacion</a></p>
+          <p>→ <a href="http://arcticnode.duckdns.org" target="_blank">Demo de prueba</a></p>
+          <p>Credenciales de prueba para testing:</p>
+          <ul>
+            <li><strong>Email:</strong> usuariodeprueba&#64;correo.com</li>
+            <li><strong>Contraseña:</strong> demo_user_password</li>
+          </ul>          
+          <hr>
+          <p>Web de ArcticNode: <a href="https://arcticnode.com" target="_blank">arcticnode.com</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal-backdrop fade show" *ngIf="isVisible"></div>
