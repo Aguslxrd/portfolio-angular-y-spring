@@ -6,12 +6,12 @@
               <span class="horizontalLine"></span>
           </div>
           <div class="cardContainer">
-            <a class="cardProjectContainerStyle" href="https://github.com/Aguslxrd/arctic-crm" target="_blank">
+            <a class="cardProjectContainerStyle" (click)="openModal()">
                 <div class="cardImageContainer">
                     <img src="../../../assets/img/arctic-crm-preview.webp" alt="Card arctic-crm">
                 </div>
                 <p class="titleProject">ArcticCRM</p>
-            </a>
+            </a>            
             <a class="cardProjectContainerStyle" href="https://github.com/Aguslxrd/ecommerce-backend" target="_blank">
                 <div class="cardImageContainer">
                     <img src="../../../assets/img/ecommerce-logo.png" alt="Card ECommerce">
@@ -39,4 +39,5 @@
           </div>
       </div>
   </section>
+  <app-arcticcrm-modal [isVisible]="isModalVisible" (close)="closeModal()"></app-arcticcrm-modal>
 </article>
